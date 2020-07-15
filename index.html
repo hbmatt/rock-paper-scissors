@@ -64,8 +64,6 @@
         playerSelection = prompt("Rock, paper, or scissors?");
         computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection));
-        playerSelection = prompt("Rock, paper, or scissors?");
-        computerSelection = computerPlay();
         if ( playerScore < computerScore ) {
             console.log(`With a final score of ${computerScore} to ${playerScore}, the computer wins!`);
         } else if ( playerScore > computerScore) {
