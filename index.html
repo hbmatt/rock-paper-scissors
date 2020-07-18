@@ -3,81 +3,28 @@
 <head>
   <title>Rock, Paper, Scissors</title>
   <meta charset="UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
-  <script>
 
-    function capitalize(string) {
-      string = string.toLowerCase();
-      let firstLetter = string.charAt(0);
-      let newString = string.replace(firstLetter,firstLetter.toUpperCase());
-      return newString;
-    };
-    
-    function computerPlay() {
-        let num = Math.floor((Math.random() * 3) + 1);
-        if ( num == 1) {
-            return 'Rock';
-        } else if ( num == 2) {
-            return 'Paper';
-        } else {
-            return 'Scissors';
-        }
-    };
+  <div class="border">
+    <div class="container">
+        <h1>Rock, Paper, Scissors</h1><Br>
+        <h2>Click on the buttons to play.</h2><Br>
 
-    let playerScore = 0;
-    let computerScore = 0;
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
 
-    function playRound(playerSelection, computerSelection) {
-        playerSelection = capitalize(playerSelection);
-        if ( playerSelection == 'Rock' && computerSelection == 'Paper' || 
-        playerSelection == 'Paper' && computerSelection == 'Scissors' ||
-        playerSelection == 'Scissors' && computerSelection == 'Rock') {
-            computerScore += 1;
-            return `You lose! ${computerSelection} beats ${playerSelection}.`;
-        } else if ( playerSelection == 'Rock' && computerSelection == 'Scissors' || 
-        playerSelection == 'Paper' && computerSelection == 'Rock' ||
-        playerSelection == 'Scissors' && computerSelection == 'Paper') {
-            playerScore += 1;
-            return `You win! ${playerSelection} beats ${computerSelection}.`;
-        } else if ( playerSelection == computerSelection ) {
-            return `Draw! ${playerSelection} ties with ${computerSelection}.`;
-        } else {
-            computerScore += 1;
-            return `You didn't choose rock, paper, or scissors! The computer wins!`;
-        }
-    };
+        <div class="results">
+            <div class="result-text"></div>
+            <h3 id="player">You: 0</h3>
+            <h3 id="computer">Computer: 0</h3><BR>
+        </div>
 
-    function Game() {
-        playerSelection = prompt("Rock, paper, or scissors?");
-        computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        playerSelection = prompt("Rock, paper, or scissors?");
-        computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        playerSelection = prompt("Rock, paper, or scissors?");
-        computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        playerSelection = prompt("Rock, paper, or scissors?");
-        computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        playerSelection = prompt("Rock, paper, or scissors?");
-        computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        if ( playerScore < computerScore ) {
-            console.log(`With a final score of ${computerScore} to ${playerScore}, the computer wins!`);
-        } else if ( playerScore > computerScore) {
-            console.log(`With a final score of ${playerScore} to ${computerScore}, you win!`);
-        } else {
-            console.log(`Wow! It was a draw!`);
-        }
-    }
+    </div>
+  </div>
 
-
-   
-  </script>
-
-<center><h1>Use the console to play.</h1></center>
-
+  <script src ="./script.js"></script>
 </body>
 </html>

@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: arial, sans-serif;
+    font-size: 20px;
+}
+
+.border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 25px solid #F6AE2D;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 75%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    color: #F26419;
+    background-color: #Fff;
+    border: 5px solid #F26419;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 10px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    background: #F26419;
+    color: #fff;
+    box-shadow: 0 6px #C14B0B;
+    transition: none;
+    border-radius: 5px 5px;
+    margin: 5px 0 20px 0;
+}
+
+button:hover {
+    box-shadow: 0 8px #C14B0B;
+    top: -2px;
+}
+
+button:active {
+    box-shadow: 0 0 #C14B0B;
+    top: 6px;
+}
+
+#rock {
+    text-align: center;
+}
+
+#paper {
+    text-align: center;
+}
+
+#scissors {
+    text-align: center;
+}
+
+.results {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.results h3 {
+    display:inline-block;
+    padding: 0 15px;
+    font-size: 20px;
+}
