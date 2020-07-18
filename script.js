@@ -27,23 +27,25 @@ function playRound(playerSelection, computerSelection) {
     if ( playerSelection == 'Rock' && computerSelection == 'Paper' || 
         playerSelection == 'Paper' && computerSelection == 'Scissors' ||
          playerSelection == 'Scissors' && computerSelection == 'Rock') {
-            computerScore += 1;
-            resultText.textContent = `You lose! ${computerSelection} beats ${playerSelection}.`;
 
-            if ( playerScore <= 5 && computerScore <= 5  ) {
-                computerRunningScore.textContent = `Computer: ${computerScore}`;
+            if ( playerScore < 5 && computerScore < 5 ) {
+                computerScore += 1;
+                 resultText.textContent = `You lose! ${computerSelection} beats ${playerSelection}.`;
+                 computerRunningScore.textContent = `Computer: ${computerScore}`;
             };
+
     } else if ( playerSelection == 'Rock' && computerSelection == 'Scissors' || 
         playerSelection == 'Paper' && computerSelection == 'Rock' ||
         playerSelection == 'Scissors' && computerSelection == 'Paper') {
-             playerScore += 1;
-             resultText.textContent = `You win! ${playerSelection} beats ${computerSelection}.`;
 
-             if ( playerScore <= 5 && computerScore <= 5 ) {
+            if ( computerScore < 5 && playerScore < 5) {
+                playerScore += 1;
+                resultText.textContent = `You win! ${playerSelection} beats ${computerSelection}.`;
                 playerRunningScore.textContent = `You: ${playerScore}`;
-             };         
+             };
+
     } else if ( playerSelection == computerSelection ) {
-        if ( playerScore <= 5 && computerScore <= 5 ) {
+        if ( playerScore < 5 && computerScore < 5 ) {
             resultText.textContent = `Draw! ${playerSelection} ties with ${computerSelection}.`;
         };
       };
